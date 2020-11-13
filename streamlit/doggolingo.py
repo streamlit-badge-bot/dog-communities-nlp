@@ -16,10 +16,13 @@ st.write("Dogs (and dog-people) have their own language on the internet, but it'
 st.write("Fortunately, a picture is worth a thousand words. Select a term below to see how it's used in images and in text!")
 
 # read in terms data
-terms = []
-with open('app_terms.csv', newline='') as inputfile:
-    for row in csv.reader(inputfile):
-        terms.append(row[0])
+# terms = []
+# with open('app_terms.csv', newline='') as inputfile:
+#     for row in csv.reader(inputfile):
+#         terms.append(row[0])
+terms = pd.read_csv('app_terms.csv',header=None)
+terms = list(terms[0])
+#st.write(terms)
 
 # create selectbox 
 term = st.selectbox("Select a term to see how it's used:",terms)
