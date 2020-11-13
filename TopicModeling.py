@@ -12,7 +12,8 @@ class topic_model():
         data=None, 
         vectorizer=CountVectorizer(), 
         model=None, 
-        num_topics=10
+        num_topics=10,
+        random_state=None
         ):
         '''
         Vectorize and topic model a given text
@@ -23,7 +24,8 @@ class topic_model():
         self.data = data
         self.vectorizer = vectorizer
         self.model = model
-        self.num_topics = num_topics      
+        self.num_topics = num_topics
+        self.random_state = random_state      
 
     def get_topics(self):
         self.doc_word = self.vectorizer.fit_transform(self.data)
@@ -51,11 +53,11 @@ class topic_model():
 
         else:
             if self.model == "lsa":
-                model = TruncatedSVD(self.num_topics)
+                model = TruncatedSVD(self.num_topics,random_state=self.random_state)
             elif self.model == "nmf":
-                model = NMF(self.num_topics)
+                model = NMF(self.num_topics,random_state=self.random_state)
             elif self.model == 'lda':
-                model = LatentDirichletAllocation(self.num_topics)
+                model = LatentDirichletAllocation(self.num_topics,random_state=self.random_state)
 
             else: print("Please define a valid model.")
 
