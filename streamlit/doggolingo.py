@@ -43,7 +43,7 @@ else:
     st.write("Oops! No images found. Try another term.")
     st.image('https://images.unsplash.com/photo-1453227588063-bb302b62f50b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',width=400)
 
-st.markdown('*NOTE: may contain NSFW images. Explore at your own risk*')
+st.markdown('*NOTE: may contain NSFW images. Explore at your own risk.*')
 
 st.title('In a sentence...')
 texts = list(term_posts['full_comments'])
