@@ -1,7 +1,7 @@
 # Topic Modeling Exploration of Reddit Dog Communities
 
 ## Goal
-The goal of this project is to explore reddit dog communities using natural language processing and unsupervised learning. Pulling one year's worth of data from the top seven highest-subscribed reddit dog breed communities, I used NLP and topic modeling techniques to identify topics most commonly discussed among subreddit communities, and derived ["doggolingo"](https://www.npr.org/sections/alltechconsidered/2017/04/23/524514526/dogs-are-doggos-an-internet-language-built-around-love-for-the-puppers) terms from the corpus. Finally, I built an app to allow users to explore the meaning of different doggolingo terms.
+The goal of this project is to explore reddit dog communities using natural language processing and unsupervised learning. Pulling one year's worth of data from the top seven highest-subscribed reddit dog breed communities, I used NLP and topic modeling techniques to identify topics most commonly discussed among subreddit communities, and derived ["doggolingo"](https://www.npr.org/sections/alltechconsidered/2017/04/23/524514526/dogs-are-doggos-an-internet-language-built-around-love-for-the-puppers) terms from the corpus. Finally, I built [an app](https://share.streamlit.io/labb0t/doggolingo-explained/main) to allow users to explore the meaning of different doggolingo terms.
 
 ## Methodologies
 1. Pulled all 2019 post and comment data from the seven most highly subscribed dog breed subreddits from Googe's BigQuery, in total covering roughly 80K reddit posts.
